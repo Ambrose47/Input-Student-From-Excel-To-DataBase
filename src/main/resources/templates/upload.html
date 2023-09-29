@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Excel File</title>
+</head>
+<body>
+<h1>Upload Excel File</h1>
+<form method="post" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file" accept=".xlsx, .xls">
+    <button type="submit">Upload</button>
+</form>
+
+<!-- Hiển thị dữ liệu từ file Excel (nếu có) -->
+<div th:if="${data != null}">
+    <h2>Data from Excel:</h2>
+    <ul>
+        <li th:each="item : ${data}" th:text="${item}"></li>
+    </ul>
+</div>
+</body>
+</html>
