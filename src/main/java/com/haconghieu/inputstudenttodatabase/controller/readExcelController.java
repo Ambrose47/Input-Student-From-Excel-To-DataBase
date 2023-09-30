@@ -92,7 +92,7 @@ public class readExcelController {
         this.studentRepository = studentRepository;
     }
 
-    @GetMapping("/upexcel")
+    @GetMapping("")
     public String uploadForm() {
         return "upload";
     }
